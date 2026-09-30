@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="Portfolio of Muhammad Taimur Sajid, Computer Science student and frontend developer.">
+  <title>Muhammad Taimur Sajid — Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header sticky-top border-bottom bg-paper-blur py-3">
+    <div class="container-xl d-flex align-items-center justify-content-between">
+      <a class="brand text-decoration-none d-flex align-items-center gap-2 fw-bold" href="#home" aria-label="Taimur home">
+        <span class="brand-mark rounded-1">T</span>
+        <span class="brand-text">TAIMUR<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="main-nav d-none d-md-flex align-items-center gap-4" aria-label="Main navigation">
+        <a href="#about" class="nav-link-custom">About</a>
+        <a href="#work" class="nav-link-custom">Projects</a>
+        <a href="#skills" class="nav-link-custom">Skills</a>
+      </nav>
+
+      <a class="header-contact text-decoration-none fw-bold" href="#contact">Let's talk <i class="bi bi-arrow-up-right ms-1"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section py-5 position-relative overflow-hidden" id="home">
+      <div class="container-xl">
+        <div class="row align-items-center gy-5">
+          
+          <!-- Hero Copy -->
+          <div class="col-lg-6 hero-copy">
+            <div class="availability d-inline-flex align-items-center gap-2 px-3 py-2 border rounded-pill text-mono mb-3">
+              <span class="status-dot"></span> OPEN TO LEARNING & COLLABORATION
+            </div>
+            
+            <p class="intro-label text-mono text-muted mb-2">COMPUTER SCIENCE STUDENT · FRONTEND DEVELOPER</p>
+            <h1 class="display-3 fw-bold mb-3 hero-title">Building ideas<br>into <span class="serif-italic">real things.</span></h1>
+            <p class="hero-description text-secondary mb-4">
+              I'm <strong>Muhammad Taimur Sajid</strong> — a Computer Science student at Air University Islamabad, curious about thoughtful interfaces, useful software, and the people behind them.
+            </p>
+
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+              <a class="btn btn-dark-custom px-4 py-3 fw-bold d-inline-flex align-items-center gap-3" href="#work">
+                Explore my work <i class="bi bi-arrow-down-right text-lime"></i>
+              </a>
+              <a class="text-link-custom fw-bold text-decoration-none" href="#about">
+                A little about me <i class="bi bi-arrow-down"></i>
+              </a>
+            </div>
+
+            <div class="hero-location text-mono small text-secondary d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt-fill text-lime-dark"></i> ISLAMABAD, PAKISTAN 
+              <span class="dot-separator"></span> ORIGINALLY FROM FAISALABAD
+            </div>
+          </div>
+
+          <!-- Hero Visual Card -->
+          <div class="col-lg-6 hero-visual position-relative d-flex justify-content-center">
+            <div class="visual-grid position-absolute w-100 h-100"></div>
+            
+            <!-- Portrait Card -->
+            <div class="portrait-card p-3 rounded-3 bg-dark text-white shadow-lg position-relative">
+              <div class="portrait-top d-flex justify-content-between text-mono extra-small mb-2 text-muted">
+                <span>PERSONAL PROFILE</span>
+                <span>01 / 04</span>
+              </div>
+              
+              <div class="portrait-art rounded-2 position-relative d-flex align-items-center justify-content-center p-4">
+                <div class="portrait-halo position-absolute rounded-circle"></div>
+                <div class="portrait-initials serif-italic display-4 text-white z-1">TS</div>
+                <span class="portrait-caption position-absolute bottom-0 start-0 m-3 text-white fw-bold z-2">
+                  Curious by nature.<br>Building with intent.
+                </span>
+              </div>
+
+              <div class="portrait-bottom d-flex justify-content-between text-mono extra-small mt-2 text-muted">
+                <span>MUHAMMAD TAIMUR SAJID</span>
+                <span>CS · 2025</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="floating-note bg-white p-3 rounded-3 shadow position-absolute d-flex align-items-center gap-3">
+              <span class="note-icon bg-lime rounded-circle d-flex align-items-center justify-content-center">
+                <i class="bi bi-asterisk"></i>
+              </span>
+              <div class="d-flex flex-column">
+                <strong class="small">Always exploring</strong>
+                <small class="text-muted extra-small">code · ideas · people</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="scroll-cue text-decoration-none text-mono text-secondary d-inline-flex align-items-center gap-2 mt-5" href="#about">
+          <span class="mouse-icon"></span> SCROLL TO EXPLORE
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section py-5 border-top" id="about">
+      <div class="container-xl py-4">
+        <div class="section-kicker text-mono text-muted mb-4 d-flex align-items-center gap-2">
+          <span class="text-lime-dark fw-bold">01</span> <span class="kicker-line"></span> A LITTLE ABOUT ME
+        </div>
+
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-semibold mb-0">Curious mind.<br><span class="serif-italic text-lime-dark">Practical builder.</span></h2>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-secondary mb-3">I'm studying Computer Science at <strong>Air University, Islamabad</strong>, and I'm originally from Faisalabad. I've always been enthusiastic about coding and technology, and I enjoy turning what I learn into useful projects.</p>
+            <p class="text-secondary mb-4">I'm especially interested in frontend development, databases, and Java. I'm always looking forward to meeting people with new perspectives, learning together, and making good ideas work.</p>
+            <a class="underlined-link text-decoration-none fw-bold border-bottom pb-1" href="#contact">
+              Let's make something useful <i class="bi bi-arrow-up-right text-lime-dark ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Facts Row -->
+        <div class="row border-top border-bottom py-4 g-4 about-facts">
+          <div class="col-md-4 border-end-md">
+            <span class="fact-number text-mono text-lime-dark fw-bold">01</span>
+            <h6 class="fw-bold mb-1 mt-2">Learning by building</h6>
+            <small class="text-secondary">Projects turn concepts into experience.</small>
+          </div>
+          <div class="col-md-4 border-end-md">
+            <span class="fact-number text-mono text-lime-dark fw-bold">02</span>
+            <h6 class="fw-bold mb-1 mt-2">People first</h6>
+            <small class="text-secondary">Good work grows through fresh perspectives.</small>
+          </div>
+          <div class="col-md-4">
+            <span class="fact-number text-mono text-lime-dark fw-bold">03</span>
+            <h6 class="fw-bold mb-1 mt-2">Always curious</h6>
+            <small class="text-secondary">New tools, better questions, new ideas.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK SECTION -->
+    <section class="work-section bg-dark text-white py-5" id="work">
+      <div class="container-xl py-4">
+        <div class="section-kicker light-kicker text-mono text-secondary mb-4 d-flex align-items-center gap-2">
+          <span class="text-lime fw-bold">02</span> <span class="kicker-line bg-secondary"></span> SELECTED PROJECTS 
+          <span class="ms-auto text-muted">05 PROJECTS</span>
+        </div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-5">
+          <h2 class="display-4 fw-semibold mb-0">Things I've<br><span class="serif-italic text-lime">been building.</span></h2>
+          <p class="text-secondary mb-0 max-w-400 small">A selection of academic and personal projects. Each one is a chance to explore a problem, learn something new, and make an idea tangible.</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row g-4">
+          
+          <!-- Project 1 -->
+          <div class="col-lg-6">
+            <article class="project-card p-3 rounded-3 bg-dark-card border border-dark-subtle h-100">
+              <div class="project-number text-mono extra-small text-muted mb-2">01 <span class="text-lime">—</span> 2025</div>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="project-visual showroom-bg rounded-2 p-3 position-relative d-flex align-items-center justify-content-center min-h-180">
+                    <div class="showroom-window bg-light text-dark p-2 rounded shadow-sm w-88 text-center">
+                      <span class="text-mono extra-small">STOCK OVERVIEW</span>
+                      <div class="d-flex gap-1 my-2">
+                        <div class="bg-primary-subtle flex-fill py-2 rounded"></div>
+                        <div class="bg-warning-subtle flex-fill py-2 rounded"></div>
+                        <div class="bg-success-subtle flex-fill py-2 rounded"></div>
+                      </div>
+                    </div>
+                    <span class="project-visual-tag text-mono position-absolute bottom-0 start-0 m-2">MANAGEMENT SYSTEM</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0">Showroom Management System</h5>
+                    <i class="bi bi-arrow-up-right text-lime fs-5"></i>
+                  </div>
+                  <p class="extra-small text-secondary mb-3">A software project concept for organizing showroom workflows and keeping essential information easy to manage.</p>
+                  <div class="tag-list d-flex flex-wrap gap-1">
+                    <span class="badge bg-outline-light">JAVA</span>
+                    <span class="badge bg-outline-light">DATABASES</span>
+                    <span class="badge bg-outline-light">OOP</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-lg-6">
+            <article class="project-card p-3 rounded-3 bg-dark-card border border-dark-subtle h-100">
+              <div class="project-number text-mono extra-small text-muted mb-2">02 <span class="text-lime">—</span> 2025</div>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="project-visual lawflow-bg rounded-2 p-3 position-relative d-flex align-items-center justify-content-center min-h-180">
+                    <div class="serif-italic display-5 fw-bold text-white">LF<span class="text-lime">.</span></div>
+                    <span class="project-visual-tag text-mono position-absolute bottom-0 start-0 m-2">LEGAL WORKFLOW</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0">LawFlow</h5>
+                    <i class="bi bi-arrow-up-right text-lime fs-5"></i>
+                  </div>
+                  <p class="extra-small text-secondary mb-3">A project exploring a more organized digital experience for legal work and case workflows.</p>
+                  <div class="tag-list d-flex flex-wrap gap-1">
+                    <span class="badge bg-outline-light">WEB</span>
+                    <span class="badge bg-outline-light">UI / UX</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-lg-6">
+            <article class="project-card p-3 rounded-3 bg-dark-card border border-dark-subtle h-100">
+              <div class="project-number text-mono extra-small text-muted mb-2">03 <span class="text-lime">—</span> 2025</div>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="project-visual altis-bg rounded-2 p-3 position-relative d-flex flex-column align-items-center justify-content-center min-h-180 text-dark">
+                    <strong class="fs-4 tracking-widest">ALTIS</strong>
+                    <small class="text-mono extra-small">IDEAS IN MOTION</small>
+                    <span class="project-visual-tag text-mono position-absolute bottom-0 start-0 m-2 text-dark">EXPLORATION</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0">ALTIS</h5>
+                    <i class="bi bi-arrow-up-right text-lime fs-5"></i>
+                  </div>
+                  <p class="extra-small text-secondary mb-3">A project in progress. More details will be added as the concept and implementation take shape.</p>
+                  <div class="tag-list d-flex flex-wrap gap-1">
+                    <span class="badge bg-outline-light">IN PROGRESS</span>
+                    <span class="badge bg-outline-light">EXPLORATION</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-lg-6">
+            <article class="project-card p-3 rounded-3 bg-dark-card border border-dark-subtle h-100">
+              <div class="project-number text-mono extra-small text-muted mb-2">04 <span class="text-lime">—</span> 2025</div>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="project-visual reg-bg rounded-2 p-3 position-relative d-flex flex-column justify-content-between min-h-180 text-dark">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-dark text-lime">AU</span>
+                      <small class="text-mono extra-small">STUDENT PORTAL</small>
+                    </div>
+                    <div class="fw-bold lh-sm">Your next semester, <em class="serif-italic">in one place.</em></div>
+                    <span class="project-visual-tag text-mono position-absolute bottom-0 start-0 m-2 text-dark">UNIVERSITY PORTAL</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0">University Registration Portal</h5>
+                    <i class="bi bi-arrow-up-right text-lime fs-5"></i>
+                  </div>
+                  <p class="extra-small text-secondary mb-3">A portal concept focused on making course registration and student information more straightforward.</p>
+                  <div class="tag-list d-flex flex-wrap gap-1">
+                    <span class="badge bg-outline-light">HTML & CSS</span>
+                    <span class="badge bg-outline-light">DATABASES</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <p class="text-secondary extra-small mt-4 mb-0">Project summaries are introductory descriptions. Detailed write-ups and links can be added as they become available.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-section py-5" id="skills">
+      <div class="container-xl py-4">
+        <div class="section-kicker text-mono text-muted mb-4 d-flex align-items-center gap-2">
+          <span class="text-lime-dark fw-bold">03</span> <span class="kicker-line"></span> THE TOOLKIT
+        </div>
+
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <h2 class="display-5 fw-semibold mb-3">Tools I use<br><span class="serif-italic text-lime-dark">to make things.</span></h2>
+            <p class="text-secondary">A growing set of skills I use to learn, solve problems, and build projects.</p>
+          </div>
+
+          <div class="col-lg-7 d-flex flex-column gap-4">
+            
+            <div class="skill-group border-bottom pb-3">
+              <span class="skill-label text-mono extra-small text-muted">LANGUAGES & WEB</span>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+              </div>
+            </div>
+
+            <div class="skill-group border-bottom pb-3">
+              <span class="skill-label text-mono extra-small text-muted">APPLICATION DEVELOPMENT</span>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="skill-pill">Flutter</span>
+                <span class="skill-pill">Frontend Development</span>
+              </div>
+            </div>
+
+            <div class="skill-group border-bottom pb-3">
+              <span class="skill-label text-mono extra-small text-muted">DATA & FOUNDATIONS</span>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">Database Management</span>
+                <span class="skill-pill">Object-Oriented Programming</span>
+                <span class="skill-pill">Data Structures & Algorithms</span>
+              </div>
+            </div>
+
+            <div class="skill-group border-bottom pb-3">
+              <span class="skill-label text-mono extra-small text-muted">TOOLS</span>
+              <div class="d-flex flex-wrap gap-2 mt-2">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section bg-dark text-white py-5" id="contact">
+      <div class="container-xl py-4">
+        <div class="section-kicker light-kicker text-mono text-secondary mb-4 d-flex align-items-center gap-2">
+          <span class="text-lime fw-bold">04</span> <span class="kicker-line bg-secondary"></span> WHAT'S NEXT?
+        </div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-4 my-4">
+          <div>
+            <p class="text-mono extra-small text-muted mb-2">HAVE A PROJECT OR AN IDEA?</p>
+            <h2 class="display-3 fw-semibold mb-0">Let's build<br><span class="serif-italic text-lime">something good.</span></h2>
+          </div>
+
+          <a class="contact-circle rounded-circle bg-lime text-dark d-flex flex-column align-items-center justify-content-center text-decoration-none shadow" href="#social-links">
+            <span class="text-mono extra-small fw-bold text-center">FIND ME<br>ONLINE</span>
+            <i class="bi bi-arrow-down-right fs-4 mt-1"></i>
+          </a>
+        </div>
+
+        <p class="text-secondary small mb-5">I'm always happy to connect with people who love learning and building.</p>
+
+        <div class="border-top border-secondary-subtle pt-4 d-flex flex-column flex-md-row justify-content-between gap-3" id="social-links">
+          <span class="text-mono extra-small text-muted">FIND ME AROUND THE WEB</span>
+          <div class="d-flex flex-wrap gap-4 text-mono small">
+            <span>LinkedIn · Muhammad Taimur Sajid</span>
+            <span>GitHub · Muhammad Taimur</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer bg-black text-secondary py-4 border-top border-dark">
+    <div class="container-xl d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <a class="brand text-decoration-none d-flex align-items-center gap-2 fw-bold text-white" href="#home">
+        <span class="brand-mark rounded-1">T</span>
+        <span class="brand-text">TAIMUR<span class="brand-dot">.</span></span>
+      </a>
+
+      <span class="text-mono extra-small">DESIGNED & BUILT WITH CURIOSITY</span>
+
+      <a class="back-top text-mono extra-small text-white text-decoration-none" href="#home">
+        BACK TO TOP <i class="bi bi-arrow-up ms-1"></i>
+      </a>
+
+      <small class="text-mono extra-small">© MUHAMMAD TAIMUR SAJID</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
