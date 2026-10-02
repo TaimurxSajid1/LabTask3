@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VÉRIDIAN // Zinc Atelier</title>
+  <meta name="description" content="Architectural biophilic e-commerce store with high contrast zinc-green and white design.">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Zinc-Green & White CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar py-1 px-3 text-center text-white">
+    <span class="small font-mono">COMPLIMENTARY GLOBAL COURIER FREIGHT ON ORDERS ABOVE $150 · USE CODE <strong>ZINC15</strong> FOR 15% OFF</span>
+  </div>
+
+  <!-- Navbar (Top Bar Contract) -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom border-zinc-subtle py-3">
+    <div class="container-fluid px-lg-5">
+      <!-- Zone 1: Single text element wordmark -->
+      <a class="navbar-brand text-zinc-green font-display fw-bold fs-4 m-0" href="#hero">
+        VÉRIDIAN<span class="text-zinc-mint">.</span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#atelierNavbar" aria-controls="atelierNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Zone 2: Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-center" id="atelierNavbar">
+        <ul class="navbar-nav gap-lg-4 my-2 my-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link text-zinc-dark fw-medium" href="#collection">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-zinc-dark fw-medium" href="#craft">Craftsmanship</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-zinc-dark fw-medium" href="#reviews">Patron Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-zinc-dark fw-medium" href="#philosophy">Philosophy</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zone 3: Primary Actions -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Auth Button -->
+        <button id="authBtn" class="btn btn-sm btn-outline-zinc px-3 d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#authModal">
+          <i class="bi bi-person"></i>
+          <span id="authBtnText">Account</span>
+        </button>
+
+        <!-- Cart Trigger Button -->
+        <button class="btn btn-sm btn-zinc-dark px-3 position-relative d-flex align-items-center gap-2" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+          <i class="bi bi-bag"></i>
+          <span class="d-none d-sm-inline">Cart</span>
+          <span id="cartCountBadge" class="badge bg-zinc-mint text-dark rounded-circle px-1 ms-1">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (High-Contrast Zinc-Green & White) -->
+  <header id="hero" class="hero-section text-white py-5 py-lg-6 position-relative">
+    <div class="container-fluid px-lg-5 position-relative z-2">
+      <div class="row align-items-center g-5 py-4">
+        <div class="col-lg-7">
+          <div class="meta-label text-zinc-mint mb-3">BIOPHILIC ARCHITECTURAL ATELIER · 2026 EDITION</div>
+          <h1 class="display-3 fw-bold font-display text-white mb-4 hero-headline text-balance">
+            Machined Zinc & Living Botanicals in Striking Contrast.
+          </h1>
+          <p class="lead text-zinc-100 mb-4 col-xl-10 opacity-90">
+            A radical departure from conventional homeware. We cold-patinate heavy aerospace zinc alloy into monolithic vessels, circadian luminaires, and preserved moss biospheres designed for purist spaces.
+          </p>
+          <div class="d-flex flex-wrap gap-3 pt-2">
+            <a href="#collection" class="btn btn-white btn-lg px-4 shadow-sm fw-semibold">
+              Explore Collection
+            </a>
+            <button class="btn btn-outline-light btn-lg px-4" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+              Open Shopping Bag
+            </button>
+          </div>
+
+          <!-- Trust Evidence Metrics -->
+          <div class="row g-4 mt-4 pt-3 border-top border-zinc-translucent">
+            <div class="col-4">
+              <div class="fs-4 fw-bold font-display tabular-nums text-white">99.4%</div>
+              <div class="text-zinc-200 small">Purity Zinc Alloy</div>
+            </div>
+            <div class="col-4">
+              <div class="fs-4 fw-bold font-display tabular-nums text-white">4.92 / 5</div>
+              <div class="text-zinc-200 small">Patron Rating</div>
+            </div>
+            <div class="col-4">
+              <div class="fs-4 fw-bold font-display tabular-nums text-white">0% Plastic</div>
+              <div class="text-zinc-200 small">Molded Pulp Packaging</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-image-frame p-2 bg-white rounded-3 shadow-lg">
+            <div class="position-relative overflow-hidden rounded-2">
+              <svg class="w-100 d-block" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="500" height="400" fill="#14261E"/>
+                <circle cx="250" cy="180" r="120" fill="#203e31"/>
+                <path d="M180 320L250 140L320 320H180Z" fill="#2d5845"/>
+                <circle cx="250" cy="140" r="28" fill="#52a07c"/>
+                <rect x="235" y="160" width="30" height="150" fill="#0c1813" rx="4"/>
+                <path d="M120 360C160 330 200 340 250 340C300 340 340 330 380 360" stroke="#71c39c" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <div class="hero-img-badge position-absolute bottom-0 start-0 p-3 bg-white m-3 rounded shadow-sm text-dark">
+                <div class="fw-bold small text-zinc-green">Atelier Series 01</div>
+                <div class="text-muted" style="font-size: 0.75rem;">Cold-Patinated Monoliths</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Listing Section -->
+  <section id="collection" class="py-5 py-lg-6 bg-canvas">
+    <div class="container-fluid px-lg-5">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 pb-2 border-bottom border-zinc-subtle">
+        <div>
+          <div class="meta-label text-zinc-green">ARCHITECTURAL REPOSITORY</div>
+          <h2 class="display-6 fw-bold font-display text-zinc-dark m-0">The Zinc Archive</h2>
+        </div>
+        
+        <!-- Controls: Filters & Sort -->
+        <div class="d-flex flex-wrap align-items-center gap-2 mt-3 mt-md-0">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Category filter">
+            <button type="button" class="btn btn-zinc-filter active" data-filter="all">All Objects</button>
+            <button type="button" class="btn btn-zinc-filter" data-filter="planters">Planters</button>
+            <button type="button" class="btn btn-zinc-filter" data-filter="lighting">Lighting</button>
+            <button type="button" class="btn btn-zinc-filter" data-filter="botanicals">Botanicals</button>
+            <button type="button" class="btn btn-zinc-filter" data-filter="vessels">Vessels</button>
+          </div>
+
+          <select id="sortSelect" class="form-select form-select-sm w-auto border-zinc-subtle">
+            <option value="featured">Featured First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div id="productGrid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship / Material Story Section -->
+  <section id="craft" class="py-5 py-lg-6 bg-white border-top border-bottom border-zinc-subtle">
+    <div class="container-fluid px-lg-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="meta-label text-zinc-green">MATERIAL PROVENANCE</div>
+          <h2 class="display-6 fw-bold font-display text-zinc-dark mb-4 text-balance">
+            Forged with Purpose. Patinated by Nature.
+          </h2>
+          <p class="text-secondary leading-relaxed mb-4">
+            Unlike mass-produced painted plastics, our pieces are cast from high-density zinc-aluminum alloys. Each piece undergoes a proprietary 14-day chemical oxidation cycle using botanical moss vinegar and copper sulfate, producing unique deep emerald and sage verdigris tones.
+          </p>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="p-3 bg-zinc-50 border border-zinc-subtle rounded-2">
+                <div class="fw-bold text-zinc-dark mb-1">Self-Healing Surface</div>
+                <div class="small text-secondary">The natural zinc carbonate patina dynamically protects against corrosion over decades.</div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-zinc-50 border border-zinc-subtle rounded-2">
+                <div class="fw-bold text-zinc-dark mb-1">Heavy Thermal Mass</div>
+                <div class="small text-secondary">Stabilizes plant root temperatures against harsh indoor dry air fluctuations.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="p-4 p-lg-5 bg-zinc-dark text-white rounded-3 shadow-sm">
+            <div class="row g-4 align-items-center">
+              <div class="col-md-6 border-end-md border-zinc-translucent pe-md-4">
+                <div class="meta-label text-zinc-mint mb-2">ARCHITECTURAL ATELIER</div>
+                <h3 class="font-display fw-bold mb-3">Custom Commissions & Trade Inquiries</h3>
+                <p class="text-zinc-200 small mb-4">
+                  We collaborate with interior architects, luxury hotels, and botanical curators for site-specific zinc installations.
+                </p>
+                <button class="btn btn-outline-light btn-sm" onclick="alert('Trade inquiry portal opened. Email: trade@veridian-zinc.com')">
+                  Contact Studio
+                </button>
+              </div>
+              <div class="col-md-6 ps-md-4">
+                <div class="mb-3">
+                  <span class="text-zinc-mint fw-bold">✓</span>
+                  <span class="ms-2 small">Zero VOC finishings</span>
+                </div>
+                <div class="mb-3">
+                  <span class="text-zinc-mint fw-bold">✓</span>
+                  <span class="ms-2 small">Certified 100% recyclable alloy</span>
+                </div>
+                <div class="mb-3">
+                  <span class="text-zinc-mint fw-bold">✓</span>
+                  <span class="ms-2 small">Individual artisan serial number</span>
+                </div>
+                <div>
+                  <span class="text-zinc-mint fw-bold">✓</span>
+                  <span class="ms-2 small">Direct lifetime craftsmanship guarantee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-5 py-lg-6 bg-canvas">
+    <div class="container-fluid px-lg-5">
+      <div class="row g-5">
+        <!-- Review Summary & Form Trigger -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            <div class="meta-label text-zinc-green">PATRON VOICES</div>
+            <h2 class="display-6 fw-bold font-display text-zinc-dark mb-3">Verified Impressions</h2>
+            <div class="d-flex align-items-baseline gap-3 mb-3">
+              <span class="display-4 fw-bold font-display text-zinc-green tabular-nums">4.9</span>
+              <div>
+                <div class="text-warning fs-5">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="small text-secondary">Based on 148 verified patrons</div>
+              </div>
+            </div>
+            <p class="text-secondary small mb-4">
+              Real testimonials from collectors, architects, and botanical enthusiasts who live with VÉRIDIAN objects.
+            </p>
+
+            <!-- Add Review Card / Button -->
+            <div class="card p-3 border-zinc-subtle bg-white rounded-3 shadow-sm">
+              <h6 class="fw-bold text-zinc-dark mb-2">Share Your Experience</h6>
+              <p class="text-secondary small mb-3">Have you added our zinc pieces to your space? Let fellow collectors know.</p>
+              <button class="btn btn-outline-zinc w-100" data-bs-toggle="modal" data-bs-target="#writeReviewModal">
+                Write a Review
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Cards List -->
+        <div class="col-lg-8">
+          <div id="reviewsList" class="d-flex flex-column gap-3">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="philosophy" class="bg-zinc-dark text-white pt-5 pb-4 border-top border-zinc-subtle">
+    <div class="container-fluid px-lg-5">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand text-white font-display fw-bold fs-4 d-inline-block mb-3" href="#">
+            VÉRIDIAN<span class="text-zinc-mint">.</span>
+          </a>
+          <p class="text-zinc-200 small pe-lg-4">
+            An independent biophilic atelier creating contrast between solid industrial zinc and breathing botanical forms. Hand-patinated in limited editions.
+          </p>
+          <div class="text-zinc-mint small">
+            Atelier: 42 Rue de Veridian, District 3
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white font-display fw-bold mb-3">Collection</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 text-zinc-200">
+            <li><a href="#collection" class="text-zinc-200 text-decoration-none hover-white">Monolith Planters</a></li>
+            <li><a href="#collection" class="text-zinc-200 text-decoration-none hover-white">Circadian Lighting</a></li>
+            <li><a href="#collection" class="text-zinc-200 text-decoration-none hover-white">Botanical Essences</a></li>
+            <li><a href="#collection" class="text-zinc-200 text-decoration-none hover-white">Moss Biospheres</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white font-display fw-bold mb-3">Patron Care</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 text-zinc-200">
+            <li><a href="#" class="text-zinc-200 text-decoration-none hover-white" data-bs-toggle="modal" data-bs-target="#authModal">Account Portal</a></li>
+            <li><a href="#" class="text-zinc-200 text-decoration-none hover-white" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">Cart & Checkout</a></li>
+            <li><a href="#reviews" class="text-zinc-200 text-decoration-none hover-white">Patron Reviews</a></li>
+            <li><a href="#" class="text-zinc-200 text-decoration-none hover-white" onclick="alert('Orders ship insured via DHL Express. 30-day return policy.')">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="text-white font-display fw-bold mb-3">Atelier Dispatch</h6>
+          <p class="text-zinc-200 small">Join 12,000+ patrons receiving private preview access to limited zinc casting releases.</p>
+          <form id="newsletterForm" class="input-group mb-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing to VÉRIDIAN Atelier Dispatches.'); this.reset();">
+            <input type="email" class="form-control form-control-sm bg-zinc-800 text-white border-zinc-600" placeholder="Enter patron email" required>
+            <button class="btn btn-zinc-mint text-dark btn-sm fw-semibold" type="submit">Subscribe</button>
+          </form>
+          <div class="text-zinc-300 small" style="font-size: 0.72rem;">No promotional noise. Strictly limited edition announcements.</div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 border-top border-zinc-translucent text-zinc-300 small">
+        <div>© 2026 VÉRIDIAN Atelier. All rights reserved. Built with Bootstrap 5, HTML5 & CSS3.</div>
+        <div class="mt-2 mt-sm-0">
+          <span class="text-zinc-mint">●</span> Zinc-Green & Pure White Visual Contrast Edition
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OFFCANVAS CART DRAWER (Display Cart & Edit Cart) -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom border-zinc-subtle py-3">
+      <div class="d-flex align-items-center gap-2">
+        <h5 class="offcanvas-title font-display fw-bold text-zinc-dark m-0" id="cartOffcanvasLabel">Your Shopping Bag</h5>
+        <span id="cartDrawerCount" class="badge bg-zinc-subtle text-zinc-dark rounded-pill">0 items</span>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="bg-zinc-50 p-3 border-bottom border-zinc-subtle">
+      <div class="d-flex justify-content-between small mb-1">
+        <span id="shippingThresholdText" class="text-zinc-dark fw-medium">Add $150.00 for Free Global Courier</span>
+        <span id="shippingThresholdPercent" class="fw-bold text-zinc-green">0%</span>
+      </div>
+      <div class="progress" style="height: 6px;">
+        <div id="shippingProgressBar" class="progress-bar bg-zinc-green" role="progressbar" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column p-0">
+      <!-- Itemized Cart Items -->
+      <div id="cartItemsContainer" class="flex-grow-1 overflow-auto p-3">
+        <!-- Rendered via app.js -->
+      </div>
+
+      <!-- Cart Footer & Edit Options -->
+      <div id="cartFooterSection" class="p-3 bg-white border-top border-zinc-subtle">
+        <!-- Coupon input -->
+        <div class="input-group input-group-sm mb-3">
+          <input type="text" id="couponCodeInput" class="form-control" placeholder="Promo code (try: ZINC15)">
+          <button class="btn btn-outline-zinc" type="button" id="applyCouponBtn">Apply</button>
+        </div>
+        <div id="couponMessage" class="small mb-2"></div>
+
+        <!-- Breakdown table -->
+        <div class="d-flex justify-content-between small text-secondary mb-1">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" class="fw-medium text-dark tabular-nums">$0.00</span>
+        </div>
+        <div class="d-flex justify-content-between small text-secondary mb-1">
+          <span>Promo Discount</span>
+          <span id="cartDiscount" class="text-success tabular-nums">-$0.00</span>
+        </div>
+        <div class="d-flex justify-content-between small text-secondary mb-2">
+          <span>Courier Shipping</span>
+          <span id="cartShipping" class="tabular-nums">Calculated</span>
+        </div>
+        <div class="d-flex justify-content-between fs-5 fw-bold font-display text-zinc-dark pt-2 border-top border-zinc-subtle mb-3">
+          <span>Estimated Total</span>
+          <span id="cartTotal" class="tabular-nums">$0.00</span>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button id="proceedCheckoutBtn" class="btn btn-zinc-dark py-2 fw-semibold" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+            Proceed to Checkout
+          </button>
+          <button class="btn btn-sm btn-link text-danger text-decoration-none" id="clearCartBtn">
+            Empty Shopping Bag
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content modal-content-atelier">
+        <div class="modal-header border-bottom border-zinc-subtle py-3">
+          <h5 class="modal-title font-display fw-bold text-zinc-dark" id="checkoutModalLabel">Secure Checkout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="checkoutFormWrapper">
+            <form id="checkoutForm">
+              <div class="row g-4">
+                <!-- Left: Customer & Delivery Info -->
+                <div class="col-lg-7">
+                  <h6 class="fw-bold text-zinc-green mb-3">1. Contact & Shipping Address</h6>
+                  <div class="row g-2 mb-3">
+                    <div class="col-sm-6">
+                      <label class="form-label small text-secondary">First Name</label>
+                      <input type="text" class="form-control form-control-sm" required placeholder="Elena">
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label small text-secondary">Last Name</label>
+                      <input type="text" class="form-control form-control-sm" required placeholder="Rostova">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label small text-secondary">Email Address (Order Confirmation)</label>
+                    <input type="email" class="form-control form-control-sm" id="checkoutEmail" required placeholder="elena@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label small text-secondary">Street Address</label>
+                    <input type="text" class="form-control form-control-sm" required placeholder="42 Belvedere Way, Apt 4B">
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-sm-5">
+                      <label class="form-label small text-secondary">City</label>
+                      <input type="text" class="form-control form-control-sm" required placeholder="San Francisco">
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="form-label small text-secondary">Postal Code</label>
+                      <input type="text" class="form-control form-control-sm" required placeholder="94107">
+                    </div>
+                    <div class="col-sm-3">
+                      <label class="form-label small text-secondary">Country</label>
+                      <select class="form-select form-select-sm">
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>Germany</option>
+                        <option>Japan</option>
+                        <option>Canada</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <h6 class="fw-bold text-zinc-green mt-4 mb-3">2. Payment Method</h6>
+                  <div class="d-flex flex-column gap-2 mb-3">
+                    <label class="p-3 border rounded-2 d-flex align-items-center justify-content-between cursor-pointer payment-option selected">
+                      <div class="d-flex align-items-center gap-2">
+                        <input class="form-check-input mt-0" type="radio" name="paymentMethod" value="card" checked>
+                        <span class="small fw-semibold">Credit / Debit Card</span>
+                      </div>
+                      <i class="bi bi-credit-card fs-5 text-secondary"></i>
+                    </label>
+                    <label class="p-3 border rounded-2 d-flex align-items-center justify-content-between cursor-pointer payment-option">
+                      <div class="d-flex align-items-center gap-2">
+                        <input class="form-check-input mt-0" type="radio" name="paymentMethod" value="cod">
+                        <span class="small fw-semibold">Cash on Delivery (COD)</span>
+                      </div>
+                      <i class="bi bi-cash-stack fs-5 text-secondary"></i>
+                    </label>
+                    <label class="p-3 border rounded-2 d-flex align-items-center justify-content-between cursor-pointer payment-option">
+                      <div class="d-flex align-items-center gap-2">
+                        <input class="form-check-input mt-0" type="radio" name="paymentMethod" value="bank">
+                        <span class="small fw-semibold">Direct Bank Wire / ACH</span>
+                      </div>
+                      <i class="bi bi-bank fs-5 text-secondary"></i>
+                    </label>
+                  </div>
+
+                  <div id="cardFields" class="p-3 bg-zinc-50 border rounded-2 mb-3">
+                    <div class="mb-2">
+                      <label class="form-label small text-secondary">Card Number</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="4532 •••• •••• 8821">
+                    </div>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <label class="form-label small text-secondary">Expiry</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="08/28">
+                      </div>
+                      <div class="col-6">
+                        <label class="form-label small text-secondary">CVC</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="942">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right: Order Summary -->
+                <div class="col-lg-5">
+                  <div class="p-3 bg-zinc-50 border rounded-2">
+                    <h6 class="fw-bold text-zinc-dark mb-3">Order Summary</h6>
+                    <div id="checkoutSummaryItems" class="d-flex flex-column gap-2 mb-3 max-h-48 overflow-auto">
+                      <!-- Injected via app.js -->
+                    </div>
+                    <div class="d-flex justify-content-between small text-secondary mb-1">
+                      <span>Subtotal</span>
+                      <span id="checkoutSubtotal" class="fw-medium text-dark tabular-nums">$0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-secondary mb-1">
+                      <span>Promo Discount</span>
+                      <span id="checkoutDiscount" class="text-success tabular-nums">-$0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-secondary mb-2">
+                      <span>Insured Shipping</span>
+                      <span id="checkoutShipping" class="tabular-nums">FREE</span>
+                    </div>
+                    <div class="d-flex justify-content-between fs-5 fw-bold font-display text-zinc-dark pt-2 border-top mb-3">
+                      <span>Total Due</span>
+                      <span id="checkoutTotal" class="tabular-nums">$0.00</span>
+                    </div>
+                    <button type="submit" class="btn btn-zinc-dark w-100 py-2 fw-semibold">
+                      Complete Order
+                    </button>
+                    <div class="text-center mt-2 small text-secondary" style="font-size: 0.75rem;">
+                      <i class="bi bi-shield-lock"></i> 256-bit End-to-End Encryption
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Post-Checkout Order Success Screen -->
+          <div id="orderSuccessScreen" class="d-none text-center py-4">
+            <div class="display-4 text-success mb-3"><i class="bi bi-check-circle-fill"></i></div>
+            <h3 class="font-display fw-bold text-zinc-dark mb-2">Order Confirmed</h3>
+            <p class="text-secondary mb-4">
+              Thank you for your patronage. Your atelier order has been received and scheduled for artisan packaging.
+            </p>
+            <div class="p-3 bg-zinc-50 border rounded-2 d-inline-block text-start mb-4">
+              <div class="small"><strong>Order Number:</strong> <span id="confirmedOrderId">#VER-89421</span></div>
+              <div class="small"><strong>Estimated Courier Dispatch:</strong> 2 Business Days</div>
+              <div class="small"><strong>Receipt Dispatched to:</strong> <span id="confirmedEmail">client@veridian.com</span></div>
+            </div>
+            <div>
+              <button class="btn btn-zinc-dark px-4" data-bs-dismiss="modal">
+                Return to Atelier
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL (Signup & Login) -->
+  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-atelier">
+        <div class="modal-header border-bottom border-zinc-subtle py-3">
+          <ul class="nav nav-pills w-100 justify-content-center gap-2" id="authTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active btn-sm" id="login-tab" data-bs-toggle="pill" data-bs-target="#login-pane" type="button" role="tab">Patron Sign In</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm" id="signup-tab" data-bs-toggle="pill" data-bs-target="#signup-pane" type="button" role="tab">Create Account</button>
+            </li>
+          </ul>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="tab-content" id="authTabContent">
+            <!-- Login Form -->
+            <div class="tab-pane fade show active" id="login-pane" role="tabpanel">
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label class="form-label small text-secondary">Email Address</label>
+                  <input type="email" id="loginEmail" class="form-control" placeholder="name@domain.com" required value="elena.rostova@design.com">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small text-secondary">Password</label>
+                  <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required value="atelier2026">
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                    <label class="form-check-label small text-secondary" for="rememberMe">Remember me</label>
+                  </div>
+                  <a href="#" class="small text-zinc-green text-decoration-none" onclick="alert('Password reset link has been dispatched to your email address.')">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-zinc-dark w-100 py-2 fw-semibold">Sign In to Atelier</button>
+              </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="tab-pane fade" id="signup-pane" role="tabpanel">
+              <form id="signupForm">
+                <div class="mb-3">
+                  <label class="form-label small text-secondary">Full Name</label>
+                  <input type="text" id="signupName" class="form-control" placeholder="Julian Thorne" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small text-secondary">Email Address</label>
+                  <input type="email" id="signupEmail" class="form-control" placeholder="julian@thorne-studio.com" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small text-secondary">Password</label>
+                  <input type="password" id="signupPassword" class="form-control" placeholder="Min. 8 characters" minlength="8" required>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="termsAgree" required checked>
+                  <label class="form-check-label small text-secondary" for="termsAgree">I agree to the Patron Terms and Privacy Policy</label>
+                </div>
+                <button type="submit" class="btn btn-zinc-dark w-100 py-2 fw-semibold">Create Patron Account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WRITE REVIEW MODAL -->
+  <div class="modal fade" id="writeReviewModal" tabindex="-1" aria-labelledby="writeReviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-atelier">
+        <div class="modal-header border-bottom border-zinc-subtle py-3">
+          <h5 class="modal-title font-display fw-bold text-zinc-dark" id="writeReviewModalLabel">Write a Patron Review</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="reviewForm">
+            <div class="mb-3">
+              <label class="form-label small text-secondary">Your Name & City</label>
+              <input type="text" id="reviewAuthor" class="form-control" placeholder="e.g. David Cole, Stockholm" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-secondary">Rating</label>
+              <select id="reviewRating" class="form-select">
+                <option value="5">★★★★★ (5 Stars - Exceptional)</option>
+                <option value="4">★★★★☆ (4 Stars - Highly Recommend)</option>
+                <option value="3">★★★☆☆ (3 Stars - Good)</option>
+                <option value="2">★★☆☆☆ (2 Stars - Fair)</option>
+                <option value="1">★☆☆☆☆ (1 Star - Poor)</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-secondary">Review Headline</label>
+              <input type="text" id="reviewTitle" class="form-control" placeholder="e.g. Remarkable textural contrast" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-secondary">Your Detailed Review</label>
+              <textarea id="reviewComment" class="form-control" rows="4" placeholder="Describe the physical presence, material weight, and finish of the piece in your space..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-zinc-dark w-100 py-2 fw-semibold">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW PRODUCT MODAL -->
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content modal-content-atelier">
+        <div class="modal-header border-bottom border-zinc-subtle py-3">
+          <h5 class="modal-title font-display fw-bold text-zinc-dark" id="modalProductTitle">Object Specification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+              <div id="modalProductImgContainer" class="rounded-2 overflow-hidden bg-light shadow-sm">
+                <!-- Injected via app.js -->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="modalProductCategory" class="meta-label text-zinc-green mb-1">PLANTERS</div>
+              <h4 id="modalProductName" class="font-display fw-bold text-zinc-dark mb-2"></h4>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span id="modalProductPrice" class="fs-4 fw-bold font-display text-zinc-green tabular-nums"></span>
+                <span id="modalProductOriginalPrice" class="text-decoration-line-through text-secondary small tabular-nums"></span>
+              </div>
+              <p id="modalProductDesc" class="text-secondary small mb-3"></p>
+              <ul id="modalProductSpecs" class="list-unstyled small text-zinc-dark mb-4 border-top border-bottom py-2">
+              </ul>
+              <div class="d-flex gap-2">
+                <button id="modalAddToCartBtn" class="btn btn-zinc-dark flex-grow-1 py-2 fw-semibold">
+                  Add to Shopping Bag
+                </button>
+                <button type="button" class="btn btn-outline-zinc" data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

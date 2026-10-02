@@ -1,0 +1,305 @@
+/* ==========================================================================
+   VÉRIDIAN // Zinc Atelier
+   Design Constitution: High-Contrast Zinc-Green & Pure White Aesthetic
+   ========================================================================== */
+
+:root {
+  /* Deep Dark Zinc-Green Palette */
+  --zg-900: #0e1b15;
+  --zg-800: #14261e;
+  --zg-700: #1b352a;
+  --zg-600: #234737;
+  --zg-500: #2d5a46;
+  --zg-400: #3f7b60;
+  --zg-300: #62a382;
+  --zg-200: #9cc6af;
+  --zg-100: #d5e9de;
+  --zg-50:  #f0f7f3;
+
+  /* Botanical Mint Accent */
+  --zg-mint: #4ade80;
+  --zg-mint-dark: #22c55e;
+
+  /* Crisp White Canvas */
+  --white: #ffffff;
+  --canvas: #f8faf9;
+  --surface-border: rgba(20, 38, 30, 0.12);
+
+  /* Fonts */
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--canvas);
+  color: #17241e;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Announcement Top Bar */
+.announcement-bar {
+  background-color: var(--zg-900);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Colors & Accents */
+.bg-zinc-dark {
+  background-color: var(--zg-900) !important;
+}
+
+.bg-zinc-800 {
+  background-color: var(--zg-800) !important;
+}
+
+.bg-zinc-50 {
+  background-color: var(--zg-50) !important;
+}
+
+.bg-canvas {
+  background-color: var(--canvas) !important;
+}
+
+.text-zinc-dark {
+  color: var(--zg-900) !important;
+}
+
+.text-zinc-green {
+  color: var(--zg-700) !important;
+}
+
+.text-zinc-mint {
+  color: var(--zg-mint) !important;
+}
+
+.text-zinc-100 {
+  color: #d1e2d9 !important;
+}
+
+.text-zinc-200 {
+  color: #9cb8aa !important;
+}
+
+.text-zinc-300 {
+  color: #6d8e7e !important;
+}
+
+.border-zinc-subtle {
+  border-color: var(--surface-border) !important;
+}
+
+.border-zinc-translucent {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Buttons */
+.btn-zinc-dark {
+  background-color: var(--zg-800);
+  color: var(--white);
+  border: 1px solid var(--zg-700);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-zinc-dark:hover, .btn-zinc-dark:focus {
+  background-color: var(--zg-900);
+  color: var(--white);
+  border-color: var(--zg-600);
+  transform: translateY(-1px);
+}
+
+.btn-outline-zinc {
+  color: var(--zg-800);
+  border: 1px solid var(--zg-700);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-zinc:hover {
+  background-color: var(--zg-800);
+  color: var(--white);
+  border-color: var(--zg-800);
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--zg-900);
+  border: 1px solid var(--white);
+}
+
+.btn-white:hover {
+  background-color: #f1f6f3;
+  color: var(--zg-900);
+}
+
+.btn-zinc-mint {
+  background-color: var(--zg-mint);
+  border-color: var(--zg-mint);
+}
+
+/* Filter buttons */
+.btn-zinc-filter {
+  background: var(--white);
+  color: var(--zg-800);
+  border: 1px solid var(--surface-border);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.btn-zinc-filter.active, .btn-zinc-filter:hover {
+  background: var(--zg-800);
+  color: var(--white);
+  border-color: var(--zg-800);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--zg-900) 0%, var(--zg-800) 50%, #173024 100%);
+  border-bottom: 1px solid var(--zg-700);
+}
+
+.hero-headline {
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+/* Product Card */
+.card-product {
+  background: var(--white);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-product:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(14, 27, 21, 0.12);
+  border-color: rgba(27, 53, 42, 0.3);
+}
+
+.product-img-frame {
+  aspect-ratio: 4 / 3;
+  background-color: #f2f5f4;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-img-frame img, .product-img-frame svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-product:hover .product-img-frame img,
+.card-product:hover .product-img-frame svg {
+  transform: scale(1.04);
+}
+
+/* Offcanvas Cart */
+.offcanvas-cart {
+  width: 440px !important;
+  max-width: 92vw;
+  background: var(--white);
+}
+
+.cart-item-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background: var(--canvas);
+  border: 1px solid var(--surface-border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.stepper-btn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--surface-border);
+  background: var(--white);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.stepper-btn:hover {
+  background: var(--zg-100);
+}
+
+/* Review Cards */
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.review-card:hover {
+  border-color: rgba(27, 53, 42, 0.3);
+}
+
+/* Payment Selector */
+.payment-option {
+  transition: all 0.2s ease;
+  border-color: var(--surface-border);
+}
+
+.payment-option:hover {
+  background-color: var(--zg-50);
+}
+
+.payment-option.selected {
+  border-color: var(--zg-700);
+  background-color: var(--zg-50);
+}
+
+/* Modal Content */
+.modal-content-atelier {
+  border-radius: 12px;
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 24px 48px rgba(14, 27, 21, 0.16);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-white:hover {
+  color: var(--white) !important;
+}
